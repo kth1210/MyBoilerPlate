@@ -12,6 +12,7 @@
 		0EB1549029C5FB6C0070641B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB1548F29C5FB6C0070641B /* ViewController.swift */; };
 		0EB1549529C5FB6C0070641B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB1549429C5FB6C0070641B /* Assets.xcassets */; };
 		0EB1549829C5FB6C0070641B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB1549629C5FB6C0070641B /* LaunchScreen.storyboard */; };
+		B1F2B923B3BE527BED0EC0F9 /* Pods_MyBoilerPlate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C13DD3A87317FD57A3C066 /* Pods_MyBoilerPlate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		0EB1549429C5FB6C0070641B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EB1549729C5FB6C0070641B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EB1549929C5FB6C0070641B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30C13DD3A87317FD57A3C066 /* Pods_MyBoilerPlate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBoilerPlate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1140FD3827F3FB08F4B5B07 /* Pods-MyBoilerPlate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBoilerPlate.debug.xcconfig"; path = "Target Support Files/Pods-MyBoilerPlate/Pods-MyBoilerPlate.debug.xcconfig"; sourceTree = "<group>"; };
+		F9971F504CDC654B3D4025A4 /* Pods-MyBoilerPlate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBoilerPlate.release.xcconfig"; path = "Target Support Files/Pods-MyBoilerPlate/Pods-MyBoilerPlate.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F2B923B3BE527BED0EC0F9 /* Pods_MyBoilerPlate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				0EB1548A29C5FB6C0070641B /* MyBoilerPlate */,
 				0EB1548929C5FB6C0070641B /* Products */,
+				856FFA043EF2054EB036C5B3 /* Pods */,
+				4657E7E2F3F2FDE373900598 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = MyBoilerPlate;
 			sourceTree = "<group>";
 		};
+		4657E7E2F3F2FDE373900598 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30C13DD3A87317FD57A3C066 /* Pods_MyBoilerPlate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		856FFA043EF2054EB036C5B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1140FD3827F3FB08F4B5B07 /* Pods-MyBoilerPlate.debug.xcconfig */,
+				F9971F504CDC654B3D4025A4 /* Pods-MyBoilerPlate.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EB1549C29C5FB6C0070641B /* Build configuration list for PBXNativeTarget "MyBoilerPlate" */;
 			buildPhases = (
+				233368AC3CA56FFAEB7D02B2 /* [CP] Check Pods Manifest.lock */,
 				0EB1548429C5FB6C0070641B /* Sources */,
 				0EB1548529C5FB6C0070641B /* Frameworks */,
 				0EB1548629C5FB6C0070641B /* Resources */,
+				A153BD24BF835DB1C0308170 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,6 +155,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		233368AC3CA56FFAEB7D02B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyBoilerPlate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A153BD24BF835DB1C0308170 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyBoilerPlate/Pods-MyBoilerPlate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyBoilerPlate/Pods-MyBoilerPlate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyBoilerPlate/Pods-MyBoilerPlate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0EB1548429C5FB6C0070641B /* Sources */ = {
@@ -270,6 +339,7 @@
 		};
 		0EB1549D29C5FB6C0070641B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1140FD3827F3FB08F4B5B07 /* Pods-MyBoilerPlate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -298,6 +368,7 @@
 		};
 		0EB1549E29C5FB6C0070641B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9971F504CDC654B3D4025A4 /* Pods-MyBoilerPlate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
